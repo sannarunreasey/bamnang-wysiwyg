@@ -1,2 +1,0 @@
-bamnang-wysiwyg
-===============
