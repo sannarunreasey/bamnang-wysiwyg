@@ -6,8 +6,8 @@
 *.pid
 *.gz
 
-nodes_module
-nodes_modules/*
+node_module
+node_modules/*
 
 .DS_Store
 *~
