@@ -1,0 +1,15 @@
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+nodes_module
+nodes_modules/*
+
+.DS_Store
+*~
+*.swp
+*.swo
