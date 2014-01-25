@@ -4,6 +4,7 @@
  */
 
 var express = require('express');
+<<<<<<< HEAD
 var app = express();
 var hbs = require('express-hbs');
 var http = require('http');
@@ -14,11 +15,27 @@ var viewsDir = __dirname + '/views';
 
 // all environments
 app.set('port', process.env.PORT || 3000);
+=======
+var exphbs = require('express3-handlebars');
+// var routes = require('./routes');
+// var user = require('./routes/user');
+var http = require('http');
+var path = require('path');
+
+var app = express();
+
+// all environments
+app.set('port', process.env.PORT || 3000);
+app.set('views', path.join(__dirname, 'views'));
+app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
+>>>>>>> 6a49db3e6f8114a5b89cca94097b92a2c156abbb
 app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
+<<<<<<< HEAD
 app.use(express.static(__dirname + '/public'));
 
 // Hook in express-hbs and tell it where known directories reside
@@ -102,12 +119,23 @@ app.get('/veggies/:name', function(req, res) {
 
 
 
+=======
+app.use(app.router);
+app.use(express.static(path.join(__dirname, 'public')));
+>>>>>>> 6a49db3e6f8114a5b89cca94097b92a2c156abbb
 
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+<<<<<<< HEAD
+=======
+app.get('/', function (req, res) {
+    res.render('home');
+});
+
+>>>>>>> 6a49db3e6f8114a5b89cca94097b92a2c156abbb
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });

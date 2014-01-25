@@ -8,9 +8,12 @@
 
 node_module
 node_modules/*
+<<<<<<< HEAD
 bower.json
 assets
 assets/*
+=======
+>>>>>>> 6a49db3e6f8114a5b89cca94097b92a2c156abbb
 
 .DS_Store
 *~
